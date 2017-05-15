@@ -8,7 +8,7 @@ using System.Web;
 
 namespace ExchangeApp.Repository.Context
 {
-    public class ExchangeAppContext : IdentityDbContext<ExchangeAppContext>
+    public class ExchangeAppContext : IdentityDbContext<ExchangeAppUser>
     {
         public ExchangeAppContext() : base("ExchangeAppContext")
         {
