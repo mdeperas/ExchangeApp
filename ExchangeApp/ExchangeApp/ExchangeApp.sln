@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeApp.API", "ExchangeApp\ExchangeApp.API.csproj", "{4EEF0D88-3255-4397-A2B1-CAC8900D83F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeApp.Repository", "ExchangeApp.Repository\ExchangeApp.Repository.csproj", "{77F35E35-2EB0-4E0F-85D9-600092EA34DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EEF0D88-3255-4397-A2B1-CAC8900D83F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EEF0D88-3255-4397-A2B1-CAC8900D83F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EEF0D88-3255-4397-A2B1-CAC8900D83F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EEF0D88-3255-4397-A2B1-CAC8900D83F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77F35E35-2EB0-4E0F-85D9-600092EA34DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77F35E35-2EB0-4E0F-85D9-600092EA34DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77F35E35-2EB0-4E0F-85D9-600092EA34DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77F35E35-2EB0-4E0F-85D9-600092EA34DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
