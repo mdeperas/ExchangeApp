@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ExchangeApp.API.Services.Interfaces
 {
-    interface IExchangeAppUserService : IDisposable
+    public interface IExchangeAppUserService : IDisposable
     {
         ExchangeAppUserModel GetUser(string username);
         Task<IdentityResult> Register(ExchangeAppUserModel exchangeAppUserModel);
