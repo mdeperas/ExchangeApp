@@ -35,9 +35,11 @@ namespace ExchangeApp.API
 
             //Repositories
             builder.Register(c => new AuthRepository(new ExchangeAppContext(connectionString))).As<IAuthRepository>();
+            builder.Register(c => new CurrencyRepository(new ExchangeAppContext(connectionString))).As<ICurrencyRepository>();
 
             //Services
             builder.RegisterType<ExchangeAppUserService>().As<IExchangeAppUserService>();
+            builder.RegisterType<CurrencyService>().As<ICurrencyService>();
 
             var container = builder.Build();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);

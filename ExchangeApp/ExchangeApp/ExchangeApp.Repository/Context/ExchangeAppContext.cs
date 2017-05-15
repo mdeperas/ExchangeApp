@@ -18,6 +18,6 @@ namespace ExchangeApp.Repository.Context
         {
         }
 
-        public DbSet<ExchangeAppUser> ExchangeAppUsers { get; set; }
+        public DbSet<Currency> Currencies { get; set; }
     }
 }

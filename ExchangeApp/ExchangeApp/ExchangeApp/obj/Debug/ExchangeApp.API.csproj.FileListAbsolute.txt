@@ -64,3 +64,17 @@ C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp\bin\Microsoft.AspNet.Iden
 C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp\bin\EntityFramework.xml
 C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp\bin\EntityFramework.SqlServer.xml
 C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp\bin\Autofac.dll
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp\bin\Autofac.Integration.Owin.dll
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp\bin\Autofac.Integration.WebApi.dll
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp\bin\Autofac.Integration.WebApi.Owin.dll
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp\bin\Microsoft.Owin.Cors.dll
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp\bin\Microsoft.Practices.ServiceLocation.dll
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp\bin\System.Web.Cors.dll
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp\bin\Autofac.xml
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp\bin\Autofac.Integration.Owin.xml
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp\bin\Autofac.Integration.WebApi.xml
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp\bin\Autofac.Integration.WebApi.Owin.xml
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp\bin\Microsoft.Owin.Cors.xml
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp\bin\Microsoft.Practices.ServiceLocation.xml
