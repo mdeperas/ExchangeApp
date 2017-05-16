@@ -42,3 +42,4 @@ C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\obj\Debug\Exch
 C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\obj\Debug\ExchangeApp.Repository.csproj.GenerateResource.Cache
 C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\obj\Debug\ExchangeApp.Repository.dll
 C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\obj\Debug\ExchangeApp.Repository.pdb
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\obj\Debug\ExchangeApp.Repository.Migrations.CurrencyModelUpdated.resources

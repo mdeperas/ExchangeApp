@@ -1,1 +1,13 @@
-<h1>Welcome to Home page</h1>
+<div class="row">
+	<div class="col-md-6">
+        <div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Currencies<span class="pull-right">Published: {{$ctrl.currenciesList.PublicationDate | date:'medium'}}</span></h3>
+			</div>
+			<div class="panel-body">
+				<!--<currencies-component currencies="$ctrl.currenciesList" buy-enabled="$ctrl.userInfo.authenticated && $ctrl.currenciesList.connected"></currencies-component>-->
+                <currencies-component currencies="$ctrl.currenciesList"></currencies-component>
+			</div>
+		</div>
+	</div>
+</div>

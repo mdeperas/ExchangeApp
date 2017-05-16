@@ -4,7 +4,8 @@ import transition from './app.route.config';
 import resource from 'angular-resource';
 import { interceptors, authInterceptor } from './config/interceptor';
 import { AppComponent, TopMenuComponent, LoginComponent, LoginFormComponent, RegisterComponent, RegisterFormComponent, HomeComponent } from './components';
-import { AccountResource } from './resources/accountResource';
+import { AccountResource } from './resources/account.resource';
+import { Currencies } from './resources/currencies.resource';
 import { AuthService } from './services/authService';
 import { TokenService } from './services/tokenService';
 import { PrincipalService } from './services/principalService';
@@ -16,6 +17,7 @@ export default angular.module('app', ['ui.router', resource])
   .config(interceptors)
   .run(transition)
   .factory('AccountResource', AccountResource)
+  .factory('Currencies', Currencies)
   .factory('authInterceptor', authInterceptor)
   .service('AuthService', AuthService)
   .service('TokenService', TokenService)

@@ -27,10 +27,15 @@ export default function routing($stateProvider, $urlRouterProvider, $locationPro
       abstract: 'true'
     }
 
-    let homeRState = {
+    let restrictedHomeState = {
       name: 'restricted.home',
-      url: '/restricted',
-      component: 'homeComponent'
+      url: '/home',
+      component: 'homeComponent',
+      resolve: {
+        currencies: function(Currencies) {
+          return Currencies.query();
+        }
+      }
     }
 
     let homeState = {
@@ -59,7 +64,7 @@ export default function routing($stateProvider, $urlRouterProvider, $locationPro
 
     $stateProvider.state(freeState);
     $stateProvider.state(restrictedState);
-    $stateProvider.state(homeRState);
+    $stateProvider.state(restrictedHomeState);
     $stateProvider.state(homeState);
     $stateProvider.state(aboutState);
     $stateProvider.state(loginState);

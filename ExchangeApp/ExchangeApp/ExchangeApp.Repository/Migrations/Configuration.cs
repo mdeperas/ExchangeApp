@@ -63,49 +63,49 @@ namespace ExchangeApp.Repository.Migrations
                 new Currency()
                 {
                     Id = 1,
-                    ShortCode = "PLN",
+                    Code = "PLN",
                     Name = "Polish zloty",
                     Unit = 1
                 },
                 new Currency()
                 {
                     Id = 2,
-                    ShortCode = "USD",
+                    Code = "USD",
                     Name = "US Dollar",
                     Unit = 1
                 },
                 new Currency()
                 {
                     Id = 3,
-                    ShortCode = "EUR",
+                    Code = "EUR",
                     Name = "Euro",
                     Unit = 1
                 },
                 new Currency()
                 {
                     Id = 4,
-                    ShortCode = "CHF",
+                    Code = "CHF",
                     Name = "Swiss Franc",
                     Unit = 1
                 },
                 new Currency()
                 {
                     Id = 5,
-                    ShortCode = "RUB",
+                    Code = "RUB",
                     Name = "Russian ruble",
                     Unit = 100
                 },
                 new Currency()
                 {
                     Id = 6,
-                    ShortCode = "CZK",
+                    Code = "CZK",
                     Name = "Czech koruna",
                     Unit = 100
                 },
                 new Currency()
                 {
                     Id = 7,
-                    ShortCode = "GBP",
+                    Code = "GBP",
                     Name = "Pound sterling",
                     Unit = 1
                 }

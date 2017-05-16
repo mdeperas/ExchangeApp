@@ -1,0 +1,14 @@
+<table class="table">
+	<thead>
+		<th class="col-xs-3">Currency</th>
+		<th class="col-xs-3">Unit</th>
+		<th class="col-xs-3">Value</th>
+		<th class="col-xs-3">Action</th>
+	</thead>
+	<tr ng-repeat="currency in $ctrl.currencies" ng-show="currency.AveragePrice">
+		<td>{{currency.Code}}</td>
+		<td>{{currency.Unit}}</td>
+		<td>{{currency.SellPrice | number:2}}</td>
+		<!--<td><button class="btn btn-default btn-xs" ng-click="$ctrl.buy(currency)" ng-disabled="!$ctrl.buyEnabled">Buy</button></td>-->
+	</tr>
+</table>

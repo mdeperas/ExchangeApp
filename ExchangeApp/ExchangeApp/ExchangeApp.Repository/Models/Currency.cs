@@ -11,7 +11,7 @@ namespace ExchangeApp.Repository.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        public string ShortCode { get; set; }
+        public string Code { get; set; }
         [Required]
         public int Unit { get; set; }
         [Required]

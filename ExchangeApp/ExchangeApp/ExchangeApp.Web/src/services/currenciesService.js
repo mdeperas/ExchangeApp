@@ -1,11 +1,12 @@
 import { APIURL } from "../config/api.config";
 
-export class UserInfoService {
+export class CurrenciesService {
     constructor($http) {
         this.http = $http;
     }
-    
-    getUserInfo() {
+
+    //1a Przerob na obiekt http.
+    getCurrenciesList() {
         return this.http.get(APIURL + 'api/account');
     }
 }
