@@ -36,8 +36,8 @@ C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\bin\Microsoft.
 C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\bin\Microsoft.AspNet.Identity.Core.xml
 C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\obj\Debug\ExchangeApp.Repository.csprojResolveAssemblyReference.cache
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\obj\Debug\ExchangeApp.Repository.Migrations.Primary.resources
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\obj\Debug\ExchangeApp.Repository.Migrations.CurrenciesAdded.resources
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\obj\Debug\ExchangeApp.Repository.csproj.GenerateResource.Cache
 C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\obj\Debug\ExchangeApp.Repository.dll
 C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\obj\Debug\ExchangeApp.Repository.pdb
-C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\obj\Debug\ExchangeApp.Repository.Migrations.Primary.resources
-C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\obj\Debug\ExchangeApp.Repository.csproj.GenerateResource.Cache

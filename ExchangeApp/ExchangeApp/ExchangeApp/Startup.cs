@@ -1,11 +1,14 @@
 ﻿using Autofac;
+using Autofac.Builder;
 using Autofac.Integration.WebApi;
 using ExchangeApp.API.Services;
 using ExchangeApp.API.Services.Interfaces;
 using ExchangeApp.Repository.Context;
 using ExchangeApp.Repository.Repository;
 using ExchangeApp.Repository.Repository.Interfaces;
+using Market.API.Providers;
 using Microsoft.Owin;
+using Microsoft.Owin.Security.OAuth;
 using Owin;
 using System;
 using System.Collections.Generic;
@@ -24,14 +27,7 @@ namespace ExchangeApp.API
 
         public void Configuration(IAppBuilder app)
         {
-            HttpConfiguration config = new HttpConfiguration();
-            WebApiConfig.Register(config);
-            app.UseWebApi(config);
-
             var builder = new ContainerBuilder();
-
-            //WebApi Controllers
-            builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
             //Repositories
             builder.Register(c => new AuthRepository(new ExchangeAppContext(connectionString))).As<IAuthRepository>();
@@ -41,14 +37,39 @@ namespace ExchangeApp.API
             builder.RegisterType<ExchangeAppUserService>().As<IExchangeAppUserService>();
             builder.RegisterType<CurrencyService>().As<ICurrencyService>();
 
+            //WebApi Controllers
+            builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
+
+            //OAuth providers
+            builder.RegisterType<SimpleAuthorizationServerProvider>()
+                 .AsImplementedInterfaces<IOAuthAuthorizationServerProvider, ConcreteReflectionActivatorData>();
+
             var container = builder.Build();
+
+            HttpConfiguration config = new HttpConfiguration();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
 
+            ConfigureOAuth(app, container);
+            WebApiConfig.Register(config);
             app.UseAutofacMiddleware(container);
             app.UseAutofacWebApi(config);
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             app.UseWebApi(config);
         }
 
+        public void ConfigureOAuth(IAppBuilder app, IContainer container)
+        {
+            OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
+            {
+                AllowInsecureHttp = true,
+                TokenEndpointPath = new PathString("/token"),
+                AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
+                Provider = container.Resolve<IOAuthAuthorizationServerProvider>(),
+            };
+
+            // Token Generation
+            app.UseOAuthAuthorizationServer(OAuthServerOptions);
+            app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
+        }
     }
 }

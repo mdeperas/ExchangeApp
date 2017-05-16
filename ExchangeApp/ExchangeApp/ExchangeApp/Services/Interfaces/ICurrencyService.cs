@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExchangeApp.Repository.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,6 @@ namespace ExchangeApp.API.Services.Interfaces
 {
     public interface ICurrencyService : IDisposable
     {
-        IHttpActionResult Get();
+        List<Currency> Get();
     }
 }

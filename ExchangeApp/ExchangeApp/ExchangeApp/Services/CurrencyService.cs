@@ -1,4 +1,5 @@
 ﻿using ExchangeApp.API.Services.Interfaces;
+using ExchangeApp.Repository.Models;
 using ExchangeApp.Repository.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -19,12 +20,14 @@ namespace ExchangeApp.API.Services
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _currencyRepository.Dispose();
         }
 
-        public IHttpActionResult Get()
+        public List<Currency> Get()
         {
-            throw new NotImplementedException();
+            var temp = _currencyRepository.GetCurrencies();
+
+            return _currencyRepository.GetCurrencies();
         }
     }
 }

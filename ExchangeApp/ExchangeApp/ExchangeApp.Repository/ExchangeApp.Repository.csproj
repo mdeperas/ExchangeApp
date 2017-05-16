@@ -130,6 +130,10 @@
     <Compile Include="Migrations\201705152043197_Primary.Designer.cs">
       <DependentUpon>201705152043197_Primary.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705160931399_CurrenciesAdded.cs" />
+    <Compile Include="Migrations\201705160931399_CurrenciesAdded.Designer.cs">
+      <DependentUpon>201705160931399_CurrenciesAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\ExchangeAppUser.cs" />
@@ -142,6 +146,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705152043197_Primary.resx">
       <DependentUpon>201705152043197_Primary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705160931399_CurrenciesAdded.resx">
+      <DependentUpon>201705160931399_CurrenciesAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

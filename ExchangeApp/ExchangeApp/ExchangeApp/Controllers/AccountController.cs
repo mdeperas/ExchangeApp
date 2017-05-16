@@ -11,6 +11,7 @@ using System.Web.Http;
 
 namespace ExchangeApp.API.Controllers
 {
+    [RoutePrefix("api/account")]
     public class AccountController : ApiController
     {
         private IExchangeAppUserService _exchangeAppUserService;

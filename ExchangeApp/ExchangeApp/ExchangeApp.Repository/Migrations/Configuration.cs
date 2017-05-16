@@ -26,7 +26,7 @@ namespace ExchangeApp.Repository.Migrations
             //
             SeedRoles(context);
             SeedUsers(context);
-
+            SeedCurrencies(context);
         }
 
         private void SeedRoles(ExchangeAppContext ctx)
