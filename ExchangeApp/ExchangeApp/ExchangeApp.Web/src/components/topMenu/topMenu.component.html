@@ -1,0 +1,28 @@
+<nav id='nav' class="navbar navbar-toggleable-md navbar-inverse">
+    <span class="navbar-brand" href="#">Market</span>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href ui-sref='free.home' ui-sref-active='active'>Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href ui-sref='free.register' ui-sref-active='active'>Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href ui-sref='free.about' ui-sref-active='active'>About</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav float-right">
+            <li class="nav-item" ui-sref-active='active' ng-hide="$ctrl.principalService.isLoggedIn">
+                <a class="nav-link" href ui-sref='free.login'>Login</a>
+            </li>
+            <li class="nav-item pull-right" ui-sref-active='active' ng-show="$ctrl.principalService.isLoggedIn">
+                <p class="navbar-text">Logged in as {{$ctrl.principalService.user.username}}</p>
+            </li>
+            <li class="nav-item pull-right" ui-sref-active='active' ng-show="$ctrl.principalService.isLoggedIn">
+                <a href ng-click="$ctrl.onLogout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>

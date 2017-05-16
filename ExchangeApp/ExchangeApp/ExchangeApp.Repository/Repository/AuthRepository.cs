@@ -43,11 +43,5 @@ namespace ExchangeApp.Repository.Repository
 
             return await _userManager.CreateAsync(exchangeAppUser, password);
         }
-
-        public void Dispose()
-        {
-            _userManager.Dispose();
-            _ctx.Dispose();
-        }
     }
 }

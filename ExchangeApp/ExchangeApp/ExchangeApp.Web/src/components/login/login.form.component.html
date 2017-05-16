@@ -1,0 +1,15 @@
+    <div class="form-group">
+        <label for="emailAddress">Email address: </label>
+        <input type="text" name="emailAddress" class="form-control" ng-model="$ctrl.user.username" ng-minlength="5" placeholder="Email address" ng-change="$ctrl.update()" required>
+        <div ng-show="$ctrl.formName.emailAddress.$touched && $ctrl.formName.emailAddress.$invalid">
+            <p ng-show="$ctrl.formName.emailAddress.$error.required">Email address field is required.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password: </label>
+        <input type="password" name="password" class="form-control" ng-model="$ctrl.user.password" placeholder="Password" ng-change="$ctrl.update()" required>
+        <div ng-show="$ctrl.formName.password.$touched && $ctrl.formName.password.$invalid">
+            <p ng-show="$ctrl.formName.password.$error.required" class="help-block">Password field is required.</p>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" ng-disabled="$ctrl.formName.$invalid"> Login </button>

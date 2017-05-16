@@ -21,11 +21,6 @@ namespace ExchangeApp.API.Services
             _authRepository = authRepository;
         }
 
-        public void Dispose()
-        {
-            _authRepository.Dispose();
-        }
-
         public ExchangeAppUserModel GetUser(string username)
         {
             ExchangeAppUser exchangeAppUser = _authRepository.FindUser(username);

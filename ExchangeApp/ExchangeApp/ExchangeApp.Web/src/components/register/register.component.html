@@ -1,0 +1,6 @@
+<form ng-submit="$ctrl.register($event)" role="form" name="registerForm" novalidate>
+    <h1>Registration form</h1>
+    <h3>{{$ctrl.errorMessage}}</h3>
+    <register-form-component form-name="registerForm" on-update="$ctrl.update(user)">
+    </register-form-component>
+</form>

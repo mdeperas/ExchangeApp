@@ -1,0 +1,6 @@
+<form ng-submit="$ctrl.login($event)" name="formName" novalidate>
+    <h1>Login form</h1>
+    <h3>{{$ctrl.errorMessage}}</h3>
+    <login-form-component form-name="formName" on-update="$ctrl.update(user)">
+    </login-form-component>
+</form>

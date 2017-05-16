@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ExchangeApp.Repository.Repository.Interfaces
 {
-    public interface IAuthRepository : IDisposable
+    public interface IAuthRepository
     {
         Task<ExchangeAppUser> FindUser(string username, string password);
         ExchangeAppUser FindUser(string username);

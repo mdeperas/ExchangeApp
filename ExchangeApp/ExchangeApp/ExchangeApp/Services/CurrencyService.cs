@@ -18,11 +18,6 @@ namespace ExchangeApp.API.Services
             _currencyRepository = currencyRepository;
         }
 
-        public void Dispose()
-        {
-            _currencyRepository.Dispose();
-        }
-
         public List<Currency> Get()
         {
             var temp = _currencyRepository.GetCurrencies();

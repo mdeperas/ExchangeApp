@@ -43,14 +43,25 @@ namespace ExchangeApp.API.Controllers
             return Ok();
         }
 
-        protected override void Dispose(bool disposing)
+        [Authorize]
+        public IHttpActionResult Get()
         {
-            if (disposing)
+            var identityUser = User.Identity.GetUserName();
+
+            if (identityUser != null)
             {
-                _exchangeAppUserService.Dispose();
+                string username = _exchangeAppUserService.GetUser(identityUser).UserName;
+
+                if (!string.IsNullOrEmpty(username))
+                {
+                    return Ok(new ExchangeAppUserModel()
+                    {
+                        UserName = username
+                    });
+                }
             }
 
-            base.Dispose(disposing);
+            return NotFound();
         }
 
         private IHttpActionResult GetErrorResult(IdentityResult result)

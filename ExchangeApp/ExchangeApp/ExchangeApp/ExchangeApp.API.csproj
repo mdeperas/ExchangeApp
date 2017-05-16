@@ -192,7 +192,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CurrencyController.cs" />
     <Compile Include="Providers\SimpleAuthorizationServerProvider.cs" />
-    <Compile Include="Services\ExchangeAppUserModel.cs" />
+    <Compile Include="Models\ExchangeAppUserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CurrencyService.cs" />
     <Compile Include="Services\ExchangeAppUserService.cs" />
@@ -214,7 +214,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ExchangeApp.Repository\ExchangeApp.Repository.csproj">

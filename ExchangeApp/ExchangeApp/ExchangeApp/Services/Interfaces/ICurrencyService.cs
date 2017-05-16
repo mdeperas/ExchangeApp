@@ -8,7 +8,7 @@ using System.Web.Http;
 
 namespace ExchangeApp.API.Services.Interfaces
 {
-    public interface ICurrencyService : IDisposable
+    public interface ICurrencyService
     {
         List<Currency> Get();
     }

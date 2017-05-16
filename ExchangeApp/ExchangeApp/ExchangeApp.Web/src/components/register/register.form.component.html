@@ -1,0 +1,29 @@
+<div class="form-group">
+    <label>Email address: </label>
+    <input type="text" name="email" class="form-control" ng-model="$ctrl.user.username" ng-minlength="5" ng-maxlength="30" placeholder="Email address" ng-pattern="/^([\w-\.]+)@((?:[\w]+\.)+)([a-zA-Z]){2,4}$/"
+        ng-change="$ctrl.update()" required>
+    <div ng-show="$ctrl.formName.email.$touched && $ctrl.formName.email.$invalid">
+        <p class="help-block" ng-show="$ctrl.formName.email.$error.required">Email address is required field.</p>
+        <p class="help-block" ng-show="$ctrl.formName.email.$error.pattern">Email address is incorrect.</p>
+        <p class="help-block" ng-show="$ctrl.formName.email.$error.maxlength || $ctrl.formName.email.$error.minlength">Email address should be at least 5 and maximum of 30 characters long.</p>
+    </div>
+</div>
+<div class="form-group">
+    <label>Password: </label>
+    <input type="password" name="password" class="form-control" ng-model="$ctrl.user.password" ng-min="6" ng-max="15" placeholder="Password" ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,15}$/"
+        ng-change="$ctrl.update()" required>
+    <div ng-show="($ctrl.formName.password.$touched && $ctrl.formName.password.$invalid)">
+        <p ng-show="$ctrl.formName.password.$error.required" class="help-block">Password field is required.</p>
+        <p ng-show="$ctrl.formName.password.$error.pattern" class="help-block">Password should be at least 6 and max 15 characters long. It should contain one upper case letter, one lower case letter and one digit. </p>
+    </div>
+</div>
+<div class="form-group">
+    <label>Confirm password: </label>
+    <input type="password" name="confirmPassword" class="form-control" ng-model="$ctrl.user.confirmPassword" placeholder="Password confirmation" compare-to="$ctrl.user.password" ng-min="6" ng-max="15" 
+        ng-change="$ctrl.update()" required>
+    <div ng-show="$ctrl.formName.confirmPassword.$touched && $ctrl.formName.confirmPassword.$invalid">
+        <p ng-show="$ctrl.formName.confirmPassword.$error.required" class="help-block">Confirm password field is required.</p>
+        <p ng-show="$ctrl.formName.confirmPassword.$error.compareTo" class="help-block">Passwords do not match.</p>
+    </div>
+</div>
+<button type="submit" class="btn btn-primary" ng-disabled="$ctrl.formName.$invalid"> Submit </button>

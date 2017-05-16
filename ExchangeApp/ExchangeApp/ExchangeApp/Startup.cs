@@ -49,11 +49,11 @@ namespace ExchangeApp.API
             HttpConfiguration config = new HttpConfiguration();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
 
+            app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             ConfigureOAuth(app, container);
             WebApiConfig.Register(config);
             app.UseAutofacMiddleware(container);
             app.UseAutofacWebApi(config);
-            app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             app.UseWebApi(config);
         }
 

@@ -15,10 +15,6 @@ namespace ExchangeApp.Repository.Repository
         {
             _ctx = ctx;
         }
-        public void Dispose()
-        {
-            _ctx.Dispose();
-        }
 
         public List<Currency> GetCurrencies()
         {

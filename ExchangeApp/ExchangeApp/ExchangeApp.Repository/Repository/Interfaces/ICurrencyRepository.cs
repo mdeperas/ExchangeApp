@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ExchangeApp.Repository.Repository.Interfaces
 {
-    public interface ICurrencyRepository : IDisposable
+    public interface ICurrencyRepository
     {
         List<Currency> GetCurrencies();
     }
