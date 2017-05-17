@@ -1,6 +1,6 @@
 <div class="form-group">
     <label>Email address: </label>
-    <input type="text" name="email" class="form-control" ng-model="$ctrl.user.username" ng-minlength="5" ng-maxlength="30" placeholder="Email address" ng-pattern="/^([\w-\.]+)@((?:[\w]+\.)+)([a-zA-Z]){2,4}$/"
+    <input type="email" name="email" class="form-control" ng-model="$ctrl.user.username" ng-minlength="5" ng-maxlength="30" placeholder="Enter email address" ng-pattern="/^([\w-\.]+)@((?:[\w]+\.)+)([a-zA-Z]){2,4}$/"
         ng-change="$ctrl.update()" required>
     <div ng-show="$ctrl.formName.email.$touched && $ctrl.formName.email.$invalid">
         <p class="help-block" ng-show="$ctrl.formName.email.$error.required">Email address is required field.</p>
