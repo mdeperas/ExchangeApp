@@ -1,5 +1,9 @@
-<nav id='nav' class="navbar navbar-toggleable-md navbar-inverse">
-    <span class="navbar-brand" href="#">Market</span>
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <a class="navbar-brand" href ui-sref='free.home'>Exchange</a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -13,15 +17,15 @@
                 <a class="nav-link" href ui-sref='free.about' ui-sref-active='active'>About</a>
             </li>
         </ul>
-        <ul class="navbar-nav float-right">
-            <li class="nav-item" ui-sref-active='active' ng-hide="$ctrl.principalService.isLoggedIn">
-                <a class="nav-link" href ui-sref='free.login'>Login</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href ui-sref='free.login' ui-sref-active='active' ng-hide="$ctrl.principalService.isLoggedIn">Login</a>
             </li>
-            <li class="nav-item pull-right" ui-sref-active='active' ng-show="$ctrl.principalService.isLoggedIn">
-                <p class="navbar-text">Logged in as {{$ctrl.principalService.user.username}}</p>
+            <li class="nav-item">
+                <span class="navbar-text" ng-if="$ctrl.principalService.isLoggedIn">Logged in as {{$ctrl.principalService.user.userName}}</span>
             </li>
-            <li class="nav-item pull-right" ui-sref-active='active' ng-show="$ctrl.principalService.isLoggedIn">
-                <a href ng-click="$ctrl.onLogout()">Logout</a>
+            <li class="nav-item">
+                <a href class="nav-link" ng-click="$ctrl.onLogout()" ng-show="$ctrl.principalService.isLoggedIn">Logout</a>
             </li>
         </ul>
     </div>

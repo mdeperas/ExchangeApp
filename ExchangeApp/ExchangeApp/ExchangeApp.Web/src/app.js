@@ -3,7 +3,7 @@ import routing from './app.config';
 import transition from './app.route.config';
 import resource from 'angular-resource';
 import { interceptors, authInterceptor } from './config/interceptor';
-import { AppComponent, TopMenuComponent, LoginComponent, LoginFormComponent, RegisterComponent, RegisterFormComponent, HomeComponent } from './components';
+import { AppComponent, TopMenuComponent, LoginComponent, LoginFormComponent, RegisterComponent, RegisterFormComponent, HomeComponent, CurrenciesComponent } from './components';
 import { AccountResource } from './resources/account.resource';
 import { Currencies } from './resources/currencies.resource';
 import { AuthService } from './services/authService';
@@ -30,4 +30,5 @@ export default angular.module('app', ['ui.router', resource])
   .component('loginFormComponent', LoginFormComponent)
   .component('registerComponent', RegisterComponent)
   .component('registerFormComponent', RegisterFormComponent)
-  .component('homeComponent', HomeComponent);
+  .component('homeComponent', HomeComponent)
+  .component('currenciesComponent', CurrenciesComponent);

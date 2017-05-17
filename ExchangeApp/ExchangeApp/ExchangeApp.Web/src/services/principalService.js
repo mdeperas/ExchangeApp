@@ -29,6 +29,8 @@ export class PrincipalService {
             (response) => {
                 this.user =  response.data || response;
                 this.isLoggedIn = true;
+                console.log('user');
+            console.log(this.user);
                 deffered.resolve(true);
             },
             (errorResponse) => {
@@ -36,7 +38,7 @@ export class PrincipalService {
                 this.user = {};
                 deffered.reject(false);
             });
-
+            
             return deffered.promise;
     }
 }

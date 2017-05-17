@@ -10,7 +10,7 @@ class LoginController {
     login(event) {
         this.authService.login(this.user.username, this.user.password).then(
             (response) => {
-                this.state.go('restricted.home', {}, { reload: true });
+                this.state.go('free.home', {}, { reload: true });
             },
             (error) => {
                 error = error.data || error;

@@ -1,15 +1,19 @@
 class HomeController {
     constructor($state) {
-        this.$state = $state;
         this.currenciesList = { connected: false };
+        this.state = $state;
     }
 
     async $onInit() {
         await this.initCurrenciesList();
         this.connectWithWebSocket();
-/*        if (this.userInfo.authenticated) {
-            this.initWallet();
-        }*/
+    }
+
+    async initCurrenciesList() {
+       await this.currencies.$promise;
+        this.currencies.forEach(currency => {
+            this.currenciesList[currency.code] = currency;
+        });
     }
 
     connectWithWebSocket() {
@@ -43,28 +47,8 @@ class HomeController {
         }
     }
 
-    async initCurrenciesList() {
-        await this.currencies.$promise;
-        let currenciesList = this.currencies;
-        currenciesList.forEach(currency => {
-            this.currenciesList[currency.Code] = currency;
-        });
-    }
-
-    /*async initWallet() {
-        let wallet = await this.Wallet.get().$promise;
-        if (!wallet.Id) {
-            this.$state.go('app.home.setup');
-            return;
-        }
-        wallet.Positions.forEach(position => {
-            this.currenciesList[position.Currency.Code].Stock = position.Stock;
-        });
-        this.refreshScope();
-    }*/
-
     refreshScope() {
-        this.$state.go(this.$state.current);
+        this.state.go(this.state.current);
     }
 }
 

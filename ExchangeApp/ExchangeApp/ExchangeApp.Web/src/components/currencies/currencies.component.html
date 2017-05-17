@@ -1,14 +1,25 @@
-<table class="table">
-	<thead>
-		<th class="col-xs-3">Currency</th>
-		<th class="col-xs-3">Unit</th>
-		<th class="col-xs-3">Value</th>
-		<th class="col-xs-3">Action</th>
-	</thead>
-	<tr ng-repeat="currency in $ctrl.currencies" ng-show="currency.AveragePrice">
-		<td>{{currency.Code}}</td>
-		<td>{{currency.Unit}}</td>
-		<td>{{currency.SellPrice | number:2}}</td>
-		<!--<td><button class="btn btn-default btn-xs" ng-click="$ctrl.buy(currency)" ng-disabled="!$ctrl.buyEnabled">Buy</button></td>-->
-	</tr>
-</table>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered table-striped">
+            <thead class="table-inverse">
+                <tr>
+                    <th>Currency</th>
+                    <th>Unit</th>
+                    <th>Sell Price</th>
+                    <th>Purchase Price</th>
+                    <!--<th>Action</th>-->
+                </tr>
+            </thead>
+            <tbody>
+                <!--<tr data-ng-repeat="currency in $ctrl.currencies" ng-show="currency.AveragePrice">-->
+                <tr data-ng-repeat="currency in $ctrl.currencies">
+                    <td>{{ currency.code }}</td>
+                    <td>{{ currency.unit }}</td>
+                    <td>{{ currency.SellPrice }}</td>
+                    <td>{{ currency.PurchasePrice }}</td>
+                    <!--<td><button class="btn btn-default btn-xs" ng-click="$ctrl.buy(currency)" ng-disabled="!$ctrl.buyEnabled">Buy</button></td>-->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

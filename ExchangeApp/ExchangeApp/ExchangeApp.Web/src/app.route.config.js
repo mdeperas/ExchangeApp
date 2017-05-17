@@ -7,5 +7,5 @@ export default function transition($transitions) {
                 return transition.router.stateService.target('free.login');
             });
         }
-    })
+    });
 };

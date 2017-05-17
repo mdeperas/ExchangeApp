@@ -19,7 +19,6 @@ namespace ExchangeApp.API.Controllers
             _currencyService = currencyService;
         }
 
-        [Authorize]
         [Route("")]
         public IHttpActionResult Get()
         {
