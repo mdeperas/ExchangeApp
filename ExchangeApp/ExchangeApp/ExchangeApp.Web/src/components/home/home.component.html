@@ -1,6 +1,12 @@
-<div class="row">
-    <div class="col-md-6">
-        <!--<currencies-component currencies="$ctrl.currenciesList" buy-enabled="$ctrl.userInfo.authenticated && $ctrl.currenciesList.connected"></currencies-component>-->
-        <currencies-component currencies="$ctrl.currenciesList"></currencies-component>
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-6">
+            <!--<currencies-component currencies="$ctrl.currenciesList" buy-enabled="$ctrl.userInfo.authenticated && $ctrl.currenciesList.connected"></currencies-component>-->
+            <currencies-component currencies="$ctrl.currenciesList"></currencies-component>
+        </div>
+        <div class="col-md-6">
+            <!--<currencies-component currencies="$ctrl.currenciesList" buy-enabled="$ctrl.userInfo.authenticated && $ctrl.currenciesList.connected"></currencies-component>-->
+            <wallet-component currencies="$ctrl.currenciesList"></wallet-component>
+        </div>
     </div>
 </div>
