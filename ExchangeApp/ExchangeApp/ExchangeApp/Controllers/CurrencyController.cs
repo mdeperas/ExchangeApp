@@ -22,8 +22,6 @@ namespace ExchangeApp.API.Controllers
         [Route("")]
         public IHttpActionResult Get()
         {
-            var temp = _currencyService.Get();
-
             return Ok(_currencyService.Get());
         }
     }

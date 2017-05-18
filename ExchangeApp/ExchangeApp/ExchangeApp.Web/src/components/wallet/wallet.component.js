@@ -1,6 +1,6 @@
 class WalletController {
     constructor() {
-        
+
     }
 }
 

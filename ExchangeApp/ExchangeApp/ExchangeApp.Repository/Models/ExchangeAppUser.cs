@@ -8,7 +8,6 @@ namespace ExchangeApp.Repository.Models
 {
     public class ExchangeAppUser : IdentityUser
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
+
     }
 }

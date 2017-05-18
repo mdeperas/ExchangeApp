@@ -27,13 +27,15 @@ namespace ExchangeApp.Repository.Migrations
             SeedRoles(context);
             SeedUsers(context);
             SeedCurrencies(context);
+            SeedApplicationWallet(context);
+            SeedResources(context);
         }
 
         private void SeedRoles(ExchangeAppContext ctx)
         {
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(ctx));
 
-            if(!roleManager.RoleExists("Admin"))
+            if (!roleManager.RoleExists("Admin"))
             {
                 var role = new IdentityRole();
                 role.Name = "Admin";
@@ -47,7 +49,7 @@ namespace ExchangeApp.Repository.Migrations
             var manager = new UserManager<ExchangeAppUser>(store);
             if (!ctx.Users.Any(u => u.UserName == "Admin"))
             {
-                var user = new ExchangeAppUser { UserName = "Admin", Name = "Kamil", Surname = "Kamilianski" };
+                var user = new ExchangeAppUser { UserName = "Admin" };
                 var adminResult = manager.Create(user, "12345678");
 
                 if (adminResult.Succeeded)
@@ -110,6 +112,72 @@ namespace ExchangeApp.Repository.Migrations
                     Unit = 1
                 }
                 );
+            ctx.SaveChanges();
+        }
+
+        private void SeedApplicationWallet(ExchangeAppContext ctx)
+        {
+            ctx.ApplicationWallets.AddOrUpdate(
+                new ApplicationWallet()
+                {
+                    Id = 1,
+                    CurrencyId = 1
+                });
+            ctx.SaveChanges();
+        }
+
+        private void SeedResources(ExchangeAppContext ctx)
+        {
+            ctx.Resources.AddOrUpdate(
+                new Resource()
+                {
+                    Id = 1,
+                    WalletId = 1,
+                    Amount = 999999,
+                    CurrencyId = 1
+                },
+                new Resource()
+                {
+                    Id = 2,
+                    WalletId = 1,
+                    Amount = 999999,
+                    CurrencyId = 2
+                },
+                new Resource()
+                {
+                    Id = 3,
+                    WalletId = 1,
+                    Amount = 999999,
+                    CurrencyId = 3
+                },
+                new Resource()
+                {
+                    Id = 4,
+                    WalletId = 1,
+                    Amount = 999999,
+                    CurrencyId = 4
+                },
+                new Resource()
+                {
+                    Id = 5,
+                    WalletId = 1,
+                    Amount = 999999,
+                    CurrencyId = 5
+                },
+                new Resource()
+                {
+                    Id = 6,
+                    WalletId = 1,
+                    Amount = 999999,
+                    CurrencyId = 6
+                },
+                new Resource()
+                {
+                    Id = 7,
+                    WalletId = 1,
+                    Amount = 999999,
+                    CurrencyId = 7
+                });
             ctx.SaveChanges();
         }
     }

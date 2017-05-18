@@ -1,5 +1,6 @@
 class HomeController {
-    constructor($state) {
+    constructor($state, PrincipalService) {
+        this.principalService = PrincipalService;
         this.currenciesList = { connected: false };
         this.state = $state;
     }

@@ -19,8 +19,8 @@
             <tr data-ng-repeat="currency in $ctrl.currencies" ng-if="currency.code && currency.code != 'PLN'">
                 <td>{{ currency.code }}</td>
                 <td>{{ currency.unit }}</td>
-                <td>{{ currency.SellPrice }}</td>
-                <td>{{ currency.PurchasePrice }}</td>
+                <td>{{ currency.SellPrice| number: 2 }}</td>
+                <td>{{ currency.PurchasePrice| number: 2 }}</td>
                 <td><button class="btn btn-success btn-xs" ng-click="$ctrl.buy(currency)" ng-disabled="!$ctrl.buyEnabled">Buy</button></td>
             </tr>
         </tbody>

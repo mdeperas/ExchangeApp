@@ -18,8 +18,6 @@ namespace ExchangeApp.Repository.Repository
 
         public List<Currency> GetCurrencies()
         {
-            var temp = _ctx.Currencies.ToList();
-
             return _ctx.Currencies.ToList();
         }
     }

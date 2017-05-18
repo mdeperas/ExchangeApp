@@ -32,8 +32,6 @@ namespace ExchangeApp.API.Services
 
             return new ExchangeAppUserModel()
             {
-                Name = exchangeAppUser.Name,
-                Surname = exchangeAppUser.Surname,
                 UserName = username
             };
         }
@@ -42,8 +40,6 @@ namespace ExchangeApp.API.Services
         {
             ExchangeAppUser exchangeAppUser = new ExchangeAppUser()
             {
-                Name = exchangeAppUserModel.Name,
-                Surname = exchangeAppUserModel.Surname,
                 UserName = exchangeAppUserModel.UserName
             };
 

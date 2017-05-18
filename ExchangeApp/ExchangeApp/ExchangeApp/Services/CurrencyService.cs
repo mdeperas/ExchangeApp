@@ -20,8 +20,6 @@ namespace ExchangeApp.API.Services
 
         public List<Currency> Get()
         {
-            var temp = _currencyRepository.GetCurrencies();
-
             return _currencyRepository.GetCurrencies();
         }
     }

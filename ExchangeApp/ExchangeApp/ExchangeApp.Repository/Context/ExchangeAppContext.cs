@@ -19,5 +19,8 @@ namespace ExchangeApp.Repository.Context
         }
 
         public DbSet<Currency> Currencies { get; set; }
+        public DbSet<ApplicationWallet> ApplicationWallets { get; set; }
+        public DbSet<Resource> Resources { get; set; }
+        public DbSet<Wallet> Wallets { get; set; }
     }
 }

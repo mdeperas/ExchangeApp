@@ -138,12 +138,21 @@
     <Compile Include="Migrations\201705162124119_CurrencyModelUpdated.Designer.cs">
       <DependentUpon>201705162124119_CurrencyModelUpdated.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705180903102_UserModelUpdated.cs" />
+    <Compile Include="Migrations\201705180903102_UserModelUpdated.Designer.cs">
+      <DependentUpon>201705180903102_UserModelUpdated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ApplicationWallet.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\ExchangeAppUser.cs" />
+    <Compile Include="Models\Resource.cs" />
+    <Compile Include="Models\Wallet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\AuthRepository.cs" />
+    <Compile Include="Repository\WalletRepository.cs" />
     <Compile Include="Repository\CurrencyRepository.cs" />
+    <Compile Include="Repository\Interfaces\IWalletRepository.cs" />
     <Compile Include="Repository\Interfaces\ICurrencyRepository.cs" />
     <Compile Include="Repository\Interfaces\IAuthRepository.cs" />
   </ItemGroup>
@@ -156,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705162124119_CurrencyModelUpdated.resx">
       <DependentUpon>201705162124119_CurrencyModelUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705180903102_UserModelUpdated.resx">
+      <DependentUpon>201705180903102_UserModelUpdated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

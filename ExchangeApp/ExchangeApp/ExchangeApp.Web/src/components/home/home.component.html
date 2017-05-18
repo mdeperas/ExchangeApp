@@ -6,7 +6,7 @@
         </div>
         <div class="col-md-6">
             <!--<currencies-component currencies="$ctrl.currenciesList" buy-enabled="$ctrl.userInfo.authenticated && $ctrl.currenciesList.connected"></currencies-component>-->
-            <wallet-component currencies="$ctrl.currenciesList"></wallet-component>
+            <wallet-component currencies="$ctrl.currenciesList" ng-if="$ctrl.principalService.isLoggedIn"></wallet-component>
         </div>
     </div>
 </div>
