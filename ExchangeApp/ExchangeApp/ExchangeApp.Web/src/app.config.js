@@ -6,11 +6,6 @@ export default function routing($stateProvider, $urlRouterProvider, $locationPro
 
     $urlRouterProvider.otherwise('/404');
 
-    //app
-    //dwa drzewka stanow
-    //free (free.)
-    //logged
-
     let notFoundState = {
       name: '404',
       url: '/404',
@@ -27,7 +22,7 @@ export default function routing($stateProvider, $urlRouterProvider, $locationPro
       abstract: 'true'
     }
 
-    let restrictedHomeState = {
+    let freeHomeState = {
       name: 'free.home',
       url: '/',
       component: 'homeComponent',
@@ -36,7 +31,7 @@ export default function routing($stateProvider, $urlRouterProvider, $locationPro
           return Currencies.query();
         }
       }
-    }
+    };
 
     let aboutState = {
       name: 'free.about',
@@ -58,7 +53,7 @@ export default function routing($stateProvider, $urlRouterProvider, $locationPro
 
     $stateProvider.state(freeState);
     $stateProvider.state(restrictedState);
-    $stateProvider.state(restrictedHomeState);
+    $stateProvider.state(freeHomeState);
     $stateProvider.state(aboutState);
     $stateProvider.state(loginState);
     $stateProvider.state(notFoundState);

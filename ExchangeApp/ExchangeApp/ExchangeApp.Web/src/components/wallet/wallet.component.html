@@ -15,7 +15,6 @@
             </tr>
         </thead>
         <tbody>
-            <!--<tr data-ng-repeat="currency in $ctrl.currencies" ng-show="currency.AveragePrice">-->
             <tr data-ng-repeat="currency in $ctrl.currencies" ng-if="currency.Amount > 0 && currency.code != 'PLN'">
                 <td>{{ currency.code }}</td>
                 <td>{{ currency.PurchasePrice | number: 2 }}</td>

@@ -1,10 +1,14 @@
-<div class="jumbotron col-md-6">
-    <form ng-submit="$ctrl.register($event)" role="form" name="registerForm" novalidate>
-        <div class="text-center">
-            <p class="lead">Register</p>
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-12">
+            <form ng-submit="$ctrl.register($event)" role="form" name="registerForm" novalidate>
+                <div class="text-center">
+                    <p class="lead">Register</p>
+                </div>
+                <register-form-component currencies="$ctrl.currenciesList" form-name="registerForm" on-update="$ctrl.update(user)">
+                </register-form-component>
+                <h6>{{$ctrl.errorMessage}}</h6>
+            </form>
         </div>
-        <register-form-component form-name="registerForm" on-update="$ctrl.update(user)">
-        </register-form-component>
-        <h6>{{$ctrl.errorMessage}}</h6>
-    </form>
+    </div>
 </div>

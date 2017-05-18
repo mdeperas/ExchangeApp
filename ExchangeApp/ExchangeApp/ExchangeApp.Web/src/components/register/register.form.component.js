@@ -10,7 +10,8 @@ class RegisterFormController {
 export let RegisterFormComponent = {
     bindings: {
         formName: "<",
-        onUpdate: "&"
+        onUpdate: "&",
+        currencies: "<"
     },
     controller: RegisterFormController,
     template: require('./register.form.component.html')

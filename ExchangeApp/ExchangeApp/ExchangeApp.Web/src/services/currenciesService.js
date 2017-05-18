@@ -5,7 +5,6 @@ export class CurrenciesService {
         this.http = $http;
     }
 
-    //1a Przerob na obiekt http.
     getCurrenciesList() {
         return this.http.get(APIURL + 'api/currencies');
     }

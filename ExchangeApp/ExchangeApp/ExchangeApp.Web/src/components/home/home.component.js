@@ -18,19 +18,15 @@ class HomeController {
     }
 
     connectWithWebSocket() {
-        // Create a new WebSocket.
         var socket = new WebSocket('ws://webtask.future-processing.com:8068/ws/currencies');
 
-        //Open connection set connected.
-        socket.onopen = (event) => {
+         socket.onopen = (event) => {
             this.currenciesList.connected = true;
         };
 
-        // Handle any errors that occur.
         socket.onerror = (error) => {
             this.currenciesList.connected = false;
 
-            //TODO: put some toast here.
             console.log('WebSocket Error: ' + error);
             console.log(error);
 

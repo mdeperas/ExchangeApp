@@ -7,6 +7,7 @@ import { AppComponent, TopMenuComponent, LoginComponent, LoginFormComponent, Reg
 import { AccountResource } from './resources/account.resource';
 import { Currencies } from './resources/currencies.resource';
 import { AuthService } from './services/authService';
+import { CurrenciesService } from './services/currenciesService';
 import { TokenService } from './services/tokenService';
 import { PrincipalService } from './services/principalService';
 import { UserInfoService } from './services/userInfoService';
@@ -23,6 +24,7 @@ export default angular.module('app', ['ui.router', resource])
   .service('TokenService', TokenService)
   .service('PrincipalService', PrincipalService)
   .service('UserInfoService', UserInfoService)
+  .service('CurrenciesService', CurrenciesService)
   .directive('compareTo', compareTo)
   .component('appComponent', AppComponent)
   .component('topMenuComponent', TopMenuComponent)
