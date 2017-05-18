@@ -1,11 +1,9 @@
-﻿using ExchangeApp.Repository.Repository.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using ExchangeApp.Repository.Context;
 using ExchangeApp.Repository.Models;
-using ExchangeApp.Repository.Context;
+using ExchangeApp.Repository.Repository.Interfaces;
+using System.Linq;
 using System.Threading.Tasks;
+using System.Data.Entity.Migrations;
 
 namespace ExchangeApp.Repository.Repository
 {
@@ -14,6 +12,7 @@ namespace ExchangeApp.Repository.Repository
         private readonly int masterWalletId = 1;
 
         private ExchangeAppContext _ctx;
+
         public WalletRepository(ExchangeAppContext ctx)
         {
             _ctx = ctx;
@@ -36,7 +35,7 @@ namespace ExchangeApp.Repository.Repository
 
         public async Task<int> SaveWallet(Wallet wallet)
         {
-            //_ctx.Wallets.
+            _ctx.Wallets.AddOrUpdate(w => w.Id, wallet);
             return await _ctx.SaveChangesAsync(); 
         }
     }

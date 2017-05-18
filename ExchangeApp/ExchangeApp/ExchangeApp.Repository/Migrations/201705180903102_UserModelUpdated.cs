@@ -33,7 +33,7 @@ namespace ExchangeApp.Repository.Migrations
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Currencies", t => t.CurrencyId, cascadeDelete: true)
-                .ForeignKey("dbo.Wallets", t => t.WalletId, cascadeDelete: true)
+                .ForeignKey("dbo.Wallets", t => t.WalletId, cascadeDelete: false)
                 .Index(t => t.CurrencyId)
                 .Index(t => t.WalletId);
             

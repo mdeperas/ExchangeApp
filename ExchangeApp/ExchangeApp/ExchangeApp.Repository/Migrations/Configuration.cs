@@ -9,7 +9,7 @@ namespace ExchangeApp.Repository.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<ExchangeApp.Repository.Context.ExchangeAppContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ExchangeAppContext>
     {
         public Configuration()
         {
@@ -17,7 +17,7 @@ namespace ExchangeApp.Repository.Migrations
             AutomaticMigrationDataLossAllowed = true;
         }
 
-        protected override void Seed(ExchangeApp.Repository.Context.ExchangeAppContext context)
+        protected override void Seed(ExchangeAppContext context)
         {
             //  This method will be called after migrating to the latest version.
 

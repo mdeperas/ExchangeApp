@@ -44,3 +44,5 @@ C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\obj\Debug\Exch
 C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\obj\Debug\ExchangeApp.Repository.pdb
 C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\obj\Debug\ExchangeApp.Repository.Migrations.CurrencyModelUpdated.resources
 C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\obj\Debug\ExchangeApp.Repository.Migrations.UserModelUpdated.resources
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\bin\Newtonsoft.Json.dll
+C:\RecruitementApp\ExchangeApp\ExchangeApp\ExchangeApp.Repository\bin\Newtonsoft.Json.xml

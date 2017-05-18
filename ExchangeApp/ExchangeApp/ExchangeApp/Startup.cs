@@ -30,12 +30,14 @@ namespace ExchangeApp.API
             var builder = new ContainerBuilder();
 
             //Repositories
-            builder.Register(c => new AuthRepository(new ExchangeAppContext(connectionString))).As<IWalletRepository>();
+            builder.Register(c => new AuthRepository(new ExchangeAppContext(connectionString))).As<IAuthRepository>();
             builder.Register(c => new CurrencyRepository(new ExchangeAppContext(connectionString))).As<ICurrencyRepository>();
+            builder.Register(c => new WalletRepository(new ExchangeAppContext(connectionString))).As<IWalletRepository>();
 
             //Services
             builder.RegisterType<ExchangeAppUserService>().As<IExchangeAppUserService>();
             builder.RegisterType<CurrencyService>().As<ICurrencyService>();
+            builder.RegisterType<WalletService>().As<IWalletService>();
 
             //WebApi Controllers
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
